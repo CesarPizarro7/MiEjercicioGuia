@@ -32,11 +32,13 @@
             this.nombre = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.alturaBox = new System.Windows.Forms.TextBox();
-            this.Altura = new System.Windows.Forms.RadioButton();
+            this.Alto = new System.Windows.Forms.RadioButton();
+            this.textBoxAltura = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.Longitud = new System.Windows.Forms.RadioButton();
             this.Bonito = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Desconectar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,15 +56,15 @@
             // nombre
             // 
             this.nombre.Location = new System.Drawing.Point(155, 38);
-            this.nombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nombre.Margin = new System.Windows.Forms.Padding(4);
             this.nombre.Name = "nombre";
             this.nombre.Size = new System.Drawing.Size(217, 22);
             this.nombre.TabIndex = 3;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(167, 238);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Location = new System.Drawing.Point(173, 177);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 5;
@@ -73,48 +75,57 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.groupBox1.Controls.Add(this.Alto);
+            this.groupBox1.Controls.Add(this.textBoxAltura);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.alturaBox);
-            this.groupBox1.Controls.Add(this.Altura);
             this.groupBox1.Controls.Add(this.Longitud);
             this.groupBox1.Controls.Add(this.Bonito);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.nombre);
-            this.groupBox1.Location = new System.Drawing.Point(16, 140);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(16, 80);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(484, 347);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Peticion";
             // 
-            // alturaBox
+            // Alto
             // 
-            this.alturaBox.Location = new System.Drawing.Point(83, 139);
-            this.alturaBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.alturaBox.Name = "alturaBox";
-            this.alturaBox.Size = new System.Drawing.Size(58, 22);
-            this.alturaBox.TabIndex = 10;
+            this.Alto.AutoSize = true;
+            this.Alto.Location = new System.Drawing.Point(155, 143);
+            this.Alto.Name = "Alto";
+            this.Alto.Size = new System.Drawing.Size(94, 21);
+            this.Alto.TabIndex = 10;
+            this.Alto.TabStop = true;
+            this.Alto.Text = "Soy alt@?";
+            this.Alto.UseVisualStyleBackColor = true;
             // 
-            // Altura
+            // textBoxAltura
             // 
-            this.Altura.AutoSize = true;
-            this.Altura.Location = new System.Drawing.Point(173, 140);
-            this.Altura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Altura.Name = "Altura";
-            this.Altura.Size = new System.Drawing.Size(94, 21);
-            this.Altura.TabIndex = 9;
-            this.Altura.TabStop = true;
-            this.Altura.Text = "Soy alt@?";
-            this.Altura.UseVisualStyleBackColor = true;
+            this.textBoxAltura.Location = new System.Drawing.Point(78, 142);
+            this.textBoxAltura.Name = "textBoxAltura";
+            this.textBoxAltura.Size = new System.Drawing.Size(57, 22);
+            this.textBoxAltura.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(8, 140);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 24);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Altura:";
             // 
             // Longitud
             // 
             this.Longitud.AutoSize = true;
-            this.Longitud.Location = new System.Drawing.Point(173, 113);
-            this.Longitud.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Longitud.Location = new System.Drawing.Point(155, 115);
+            this.Longitud.Margin = new System.Windows.Forms.Padding(4);
             this.Longitud.Name = "Longitud";
             this.Longitud.Size = new System.Drawing.Size(220, 21);
             this.Longitud.TabIndex = 7;
@@ -125,8 +136,8 @@
             // Bonito
             // 
             this.Bonito.AutoSize = true;
-            this.Bonito.Location = new System.Drawing.Point(173, 84);
-            this.Bonito.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Bonito.Location = new System.Drawing.Point(155, 84);
+            this.Bonito.Margin = new System.Windows.Forms.Padding(4);
             this.Bonito.Name = "Bonito";
             this.Bonito.Size = new System.Drawing.Size(207, 21);
             this.Bonito.TabIndex = 8;
@@ -134,23 +145,37 @@
             this.Bonito.Text = "Dime si mi nombre es bonito";
             this.Bonito.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // button1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(7, 136);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 25);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Altura:";
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(170, 61);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Conectar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Conectar_Click);
+            // 
+            // Desconectar
+            // 
+            this.Desconectar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Desconectar.Location = new System.Drawing.Point(297, 12);
+            this.Desconectar.Name = "Desconectar";
+            this.Desconectar.Size = new System.Drawing.Size(203, 61);
+            this.Desconectar.TabIndex = 8;
+            this.Desconectar.Text = "Desconectar";
+            this.Desconectar.UseVisualStyleBackColor = true;
+            this.Desconectar.Click += new System.EventHandler(this.Desconectar_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(988, 692);
+            this.ClientSize = new System.Drawing.Size(515, 441);
+            this.Controls.Add(this.Desconectar);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -168,9 +193,11 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton Longitud;
         private System.Windows.Forms.RadioButton Bonito;
-        private System.Windows.Forms.TextBox alturaBox;
-        private System.Windows.Forms.RadioButton Altura;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton Alto;
+        private System.Windows.Forms.TextBox textBoxAltura;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Desconectar;
     }
 }
 
